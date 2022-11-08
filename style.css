@@ -1,0 +1,412 @@
+:root {
+    /*Colors*/
+    --clr-black: hsl(0,0%,0%);
+    --clr-aged-moustache-grey: hsl(0,0%,3%,0.5);
+    --clr-cold-morning: hsl(0,0%,90%);
+    --clr-bleached-silk: hsl(0,0%,95%);
+    --clr-white: hsl(0,0%,100%);
+
+    /*Fontfamily*/
+    --ff-primary: 'Libre Baskerville', serif;
+
+    /*Fontsizes*/
+    --fs-size-1000: 12.5rem; /*200px*/
+    --fs-size-900: 6.25rem; /*100px*/
+    --fs-size-800: 3.5rem; /*56px*/
+    --fs-size-700: 1.5rem; /*24px*/
+    --fs-size-600: 1.125rem; /*18px*/
+    --fs-size-500: 0.9375rem; /*15px*/
+    --fs-size-400: 0.875rem; /*14px*/
+    --fs-size-300: 0.8125rem; /*13px*/
+    --fs-size-200: 0.75rem; /*12px*/
+    --fs-size-100: 0.5625rem; /*9px*/
+
+    /*Sizes*/
+    --size-900: 5rem; /*80px*/
+    --size-800: 4rem; /*64px*/
+    --size-700: 3rem; /*48px*/
+    --size-600: 2rem; /*32px*/
+    --size-500: 1.5rem; /*24px*/
+    --size-400: 1rem; /*16px*/
+    --size-300: .75rem; /*12px*/
+    --size-200: .5rem; /*8px*/
+    --size-100: .25rem; /*4px*/
+
+    /*Home - Mobile, Tablet & Desktop*/
+    --fs-title-home: var(--fs-size-700);
+    --fs-subtitle-home: var(--fs-size-300);
+    --fs-header-home: var(--fs-size-200);
+    --fs-startslideshow-home: var(--fs-size-100);
+
+    /*Detail - Mobile*/
+    --fs-anno-mobile-detail: var(--fs-size-900);
+    --fs-body-mobile-detail: var(--fs-size-400);
+    --fs-link-mobile-detail: var(--fs-size-100);
+    --fs-currenttitle-mobile-detail: var(--fs-size-400);
+    --fs-currentsubtitle-mobile-detail: var(--fs-size-100);
+    --fs-title-mobile-detail: var(--fs-size-700);
+    --fs-subtitle-mobile-detail: var(--fs-size-500);
+    --fs-header-mobile-detail: var(--fs-size-200);
+
+    /*Detail - Tablet*/
+    --fs-anno-tablet-detail: var(--fs-size-1000);
+    --fs-body-tablet-detail: var(--fs-size-400);
+    --fs-link-tablet-detail: var(--fs-size-100);
+    --fs-currenttitle-tablet-detail: var(--fs-size-600);
+    --fs-currentsubtitle-tablet-detail: var(--fs-size-300);
+    --fs-title-tablet-detail: var(--fs-size-800);
+    --fs-subtitle-tablet-detail: var(--fs-size-500);
+    --fs-header-tablet-detail: var(--fs-size-200);
+
+    /*Detail - Desktop*/
+    --fs-anno-desktop-detail: var(--fs-size-1000);
+    --fs-body-desktop-detail: var(--fs-size-400);
+    --fs-link-desktop-detail: var(--fs-size-100);
+    --fs-currenttitle-desktop-detail: var(--fs-size-600);
+    --fs-currentsubtitle-desktop-detail: var(--fs-size-300);
+    --fs-title-desktop-detail: var(--fs-size-800);
+    --fs-subtitle-desktop-detail: var(--fs-size-500);
+    --fs-header-desktop-detail: var(--fs-size-200);
+}
+
+/* https://piccalil.li/blog/a-modern-css-reset*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin/padding */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+/* Set core body defaults */
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+    scroll-behavior: auto;
+}
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    }
+}
+
+/* general styling */
+
+h1,
+p,
+a {
+    font-family: var(--ff-primary);
+}
+
+/* Header */
+
+.header {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.header-container::after {
+    position: absolute;
+    background-color: var(--clr-cold-morning);
+    content: '';
+    height: 1px;
+    width: 100%;
+    top: 100%;
+    left: 0;
+}
+
+.sr-only {
+    display: none;
+}
+
+.logo {
+    width: 30%;
+}
+
+.start-slideshow {
+    color: var(--clr-aged-moustache-grey);
+    font-size: var(--fs-startslideshow-home);
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+@media(min-width: 768px) {
+    .logo {
+        width: 15%;    
+    }
+
+    .start-slideshow {
+        font-size: var(--fs-size-200);
+    }
+}
+
+/* Main */
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem auto 0;
+}
+
+@media(min-width: 768px) {
+
+    .main-container {
+        display: grid;
+        padding: 0 1rem 0;
+        justify-items: center;
+        align-items: start;
+        row-gap: 5px;
+        column-gap: 1px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(91, 25px);
+        grid-template-areas: 
+            "starry-night girl-with-a-pearl-earring"
+            "starry-night girl-with-a-pearl-earring"
+            "starry-night girl-with-a-pearl-earring"
+            "starry-night girl-with-a-pearl-earring"
+            "starry-night girl-with-a-pearl-earring"
+            "starry-night girl-with-a-pearl-earring"
+            "starry-night girl-with-a-pearl-earring"
+            "starry-night girl-with-a-pearl-earring"
+            "starry-night girl-with-a-pearl-earring"
+            "guernica girl-with-a-pearl-earring"
+            "guernica girl-with-a-pearl-earring"
+            "guernica girl-with-a-pearl-earring"
+            "guernica girl-with-a-pearl-earring"
+            "guernica girl-with-a-pearl-earring"
+            "guernica penitent-magdalene"
+            "guernica penitent-magdalene"
+            "guernica penitent-magdalene"
+            "guernica penitent-magdalene"
+            "guernica penitent-magdalene"
+            "the-storm-on-the-sea-of-galilee penitent-magdalene"
+            "the-storm-on-the-sea-of-galilee penitent-magdalene"
+            "the-storm-on-the-sea-of-galilee penitent-magdalene"
+            "the-storm-on-the-sea-of-galilee penitent-magdalene"
+            "the-storm-on-the-sea-of-galilee the-great-wave-off-kanagawa"
+            "the-storm-on-the-sea-of-galilee the-great-wave-off-kanagawa"
+            "the-storm-on-the-sea-of-galilee the-great-wave-off-kanagawa"
+            "the-storm-on-the-sea-of-galilee the-great-wave-off-kanagawa"
+            "the-storm-on-the-sea-of-galilee the-great-wave-off-kanagawa"
+            "the-storm-on-the-sea-of-galilee the-great-wave-off-kanagawa"
+            "the-storm-on-the-sea-of-galilee the-great-wave-off-kanagawa"
+            "the-storm-on-the-sea-of-galilee the-great-wave-off-kanagawa"
+            "van-gogh-self-portrait the-great-wave-off-kanagawa"
+            "van-gogh-self-portrait the-great-wave-off-kanagawa"
+            "van-gogh-self-portrait the-sleeping-gypsy"
+            "van-gogh-self-portrait the-sleeping-gypsy"
+            "van-gogh-self-portrait the-sleeping-gypsy"
+            "van-gogh-self-portrait the-sleeping-gypsy"
+            "van-gogh-self-portrait the-sleeping-gypsy"
+            "van-gogh-self-portrait the-sleeping-gypsy"
+            "van-gogh-self-portrait the-sleeping-gypsy"
+            "van-gogh-self-portrait the-sleeping-gypsy"
+            "van-gogh-self-portrait the-sleeping-gypsy"
+            "van-gogh-self-portrait the-night-cafe"
+            "van-gogh-self-portrait the-night-cafe"
+            "van-gogh-self-portrait the-night-cafe"
+            "van-gogh-self-portrait the-night-cafe"
+            "van-gogh-self-portrait the-night-cafe"
+            "van-gogh-self-portrait the-night-cafe"
+            "van-gogh-self-portrait the-night-cafe"
+            "lady-with-an-ermine the-night-cafe"
+            "lady-with-an-ermine the-night-cafe"
+            "lady-with-an-ermine the-basket-of-apples"
+            "lady-with-an-ermine the-basket-of-apples"
+            "lady-with-an-ermine the-basket-of-apples"
+            "lady-with-an-ermine the-basket-of-apples"
+            "lady-with-an-ermine the-basket-of-apples"
+            "lady-with-an-ermine the-basket-of-apples"
+            "lady-with-an-ermine the-basket-of-apples"
+            "lady-with-an-ermine the-basket-of-apples"
+            "lady-with-an-ermine the-basket-of-apples"
+            "lady-with-an-ermine the-basket-of-apples"
+            "lady-with-an-ermine the-basket-of-apples"
+            "lady-with-an-ermine the-basket-of-apples"
+            "lady-with-an-ermine the-basket-of-apples"
+            "the-boy-in-the-red-vest the-basket-of-apples"
+            "the-boy-in-the-red-vest the-basket-of-apples"
+            "the-boy-in-the-red-vest arnolfini-portrait"
+            "the-boy-in-the-red-vest arnolfini-portrait"
+            "the-boy-in-the-red-vest arnolfini-portrait"
+            "the-boy-in-the-red-vest arnolfini-portrait"
+            "the-boy-in-the-red-vest arnolfini-portrait"
+            "the-boy-in-the-red-vest arnolfini-portrait"
+            "the-boy-in-the-red-vest arnolfini-portrait"
+            "mona-lisa arnolfini-portrait"
+            "mona-lisa arnolfini-portrait"
+            "mona-lisa arnolfini-portrait"
+            "mona-lisa arnolfini-portrait"
+            "mona-lisa arnolfini-portrait"
+            "mona-lisa ."
+            "mona-lisa the-swing"
+            "mona-lisa the-swing"
+            "mona-lisa the-swing"
+            "mona-lisa the-swing"
+            "mona-lisa the-swing"
+            "mona-lisa the-swing"
+            "mona-lisa the-swing"
+            "mona-lisa the-swing"
+            "mona-lisa the-swing"
+            "mona-lisa the-swing"
+            "mona-lisa the-swing"
+            "mona-lisa the-swing";
+    }
+
+    .first-gallery-element {
+        grid-area: starry-night;
+    }
+
+    .second-gallery-element {
+        grid-area: girl-with-a-pearl-earring;
+    }
+
+    .third-gallery-element {
+        grid-area: guernica;
+    }
+
+    .fourth-gallery-element {
+        grid-area: penitent-magdalene;
+    }
+
+    .fifth-gallery-element {
+        grid-area: the-storm-on-the-sea-of-galilee;
+    }
+
+    .sixth-gallery-element {
+        grid-area: the-great-wave-off-kanagawa;
+    }
+
+    .seventh-gallery-element {
+        grid-area: van-gogh-self-portrait;
+    }
+
+    .eighth-gallery-element {
+        grid-area: the-sleeping-gypsy;
+    }
+
+    .ninth-gallery-element {
+        grid-area: lady-with-an-ermine;
+    }
+
+    .tenth-gallery-element {
+        grid-area: the-night-cafe;
+    }
+    
+    .eleventh-gallery-element {
+        grid-area: the-basket-of-apples;
+    }
+
+    .twelfth-gallery-element {
+        grid-area: the-boy-in-the-red-vest;
+    }
+
+    .thirteenth-gallery-element {
+        grid-area: arnolfini-portrait;
+    }
+
+    .fourteenth-gallery-element {
+        grid-area: mona-lisa;
+    }
+
+    .fifthteenth-gallery-element {
+        grid-area: the-swing;
+    }
+}
+
+.gallery-element {
+    position: relative;
+    align-self: center;
+    margin-bottom: 1.5rem;
+    opacity: 1.5;
+}
+
+@media(min-width: 768px) {
+    .gallery-element {
+        align-self: start;
+    }
+}
+
+.gallery-element-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-element-text-wrapper {
+    position: absolute;
+    max-width: 240px;
+    left: 30px;
+    bottom: 37px;
+}
+
+.gallery-element-title,
+.gallery-element-subtitle {
+    color: var(--clr-white);
+}
+
+.gallery-element-title {
+    font-size: var(--fs-size-700);
+    font-weight: bold;
+}
+
+.gallery-element-subtitle {
+    font-size: var(--fs-size-300);
+}

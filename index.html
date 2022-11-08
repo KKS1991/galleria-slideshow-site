@@ -5,55 +5,164 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | Galleria slideshow site</title>
 </head>
 <body>
-  Start slideshow
 
-  Starry Night
-  Vincent Van Gogh
+  <header class="header">
+    <div class="header-container">
+      <h1 class="sr-only">Galleria - Homepage</h1>
+      <img class="logo" src="assets/shared/logo.svg" alt="Logo">
+      <a class="start-slideshow" href="">Start slideshow</a>
+    </div>
+  </header>
 
-  Girl with a Pearl Earring
-  Johannes Vermeer
+  <main>
+    <div class="main-container">
 
-  Guernica
-  Pablo Picasso
+      <div class="gallery-element first-gallery-element">
+        <img class="gallery-element-img first-gallery-element-img" src="assets/starry-night/thumbnail.jpg" alt="Starry-Night - Vincent Van Gogh">
+        <div class="gallery-element-text-wrapper">
+          <p class="gallery-element-title">Starry Night</p>
+          <p class="gallery-element-subtitle">Vincent Van Gogh</p>
+        </div>
+      </div>
 
-  Penitent Magdalene
-  Artemisia Gentileschi
+      <div class="gallery-element second-gallery-element">
+        <img class="gallery-element-img second-gallery-element-img" src="assets/girl-with-pearl-earring/thumbnail.jpg" alt="Girl with a pearl earring - Johannes Vermeer">
+        <div class="gallery-element-text-wrapper">
+          <p class="gallery-element-title">Girl with a Pearl Earring</p>
+          <p class="gallery-element-subtitle">Johannes Vermeer</p>
+        </div>
+      </div>
 
-  The Storm on the Sea of Galilee
-  Rembrandt
+      <div class="gallery-element third-gallery-element">
+        <img class="gallery-element-img third-gallery-element-img" src="assets/guernica/thumbnail.jpg" alt="Guernica - Pablo Picasso">
+        <div class="gallery-element-text-wrapper">
+          <p class="gallery-element-title">Guernica</p>
+          <p class="gallery-element-subtitle">Pablo Picasso</p>
+        </div>
+      </div>
 
-  The Great Wave off Kanagawa
-  Hokusai
+      <div class="gallery-element fourth-gallery-element">
+        <img class="gallery-element-img fourth-gallery-element-img"src="assets/penitent-magdalene/thumbnail.jpg" alt="Penitent Magdalene - Artemisia Gentileschi">
+        <div class="gallery-element-text-wrapper">
+          <p class="gallery-element-title">Penitent Magdalene</p>
+          <p class="gallery-element-subtitle">Artemisia Gentileschi</p>
+        </div>
+      </div>
 
-  Van Gogh Self-portrait
-  Vincent Van Gogh
+      <div class="gallery-element fifth-gallery-element">
+        <img class="gallery-element-img fifth-gallery-element-img"src="assets/the-storm-on-the-sea-of-galilee/thumbnail.jpg" alt="The Storm on the Sea of Galilee - Rembrandt">
+        <div class="gallery-element-text-wrapper">
+          <p class="gallery-element-title">The Storm on the Sea of Galilee</p>
+          <p class="gallery-element-subtitle">Rembrandt</p>
+        </div>
+      </div>
 
-  The Sleeping Gypsy
-  Henri Rousseau
+      <div class="gallery-element sixth-gallery-element">
+        <img class="gallery-element-img sixth-gallery-element-img"src="assets/the-great-wave-off-kanagawa/thumbnail.jpg" alt="The Great Wave off Kanagawa - Hokusai">
+        <div class="gallery-element-text-wrapper">
+          <p class="gallery-element-title">The Great Wave off Kanagawa</p>
+          <p class="gallery-element-subtitle">Hokusai</p>
+        </div>
+      </div>
 
-  Lady with an Ermine
-  Leonardo da Vinci
+      <div class="gallery-element seventh-gallery-element">
+        <img class="gallery-element-img seventh-gallery-element-img"src="assets/van-gogh-self-portrait/thumbnail.jpg" alt="Van Gogh self-portrait - Vincent van Gogh">
+        <div class="gallery-element-text-wrapper">
+          <p class="gallery-element-title">Van Gogh Self-portrait</p>
+          <p class="gallery-element-subtitle">Vincent Van Gogh</p>
+        </div>
+      </div>
 
-  The Night Café
-  Vincent Van Gogh
+      <div class="gallery-element eighth-gallery-element">
+        <img class="gallery-element-img eighth-gallery-element-img"src="assets/the-sleeping-gypsy/thumbnail.jpg" alt="The Sleeping Gypsy - Henri Rousseau">
+        <div class="gallery-element-text-wrapper">
+          <p class="gallery-element-title">The Sleeping Gypsy</p>
+          <p class="gallery-element-subtitle">Henri Rousseau</p>
+        </div>
+      </div>
 
-  The Basket of Apples
-  Paul Cézanne
+      <div class="gallery-element ninth-gallery-element">
+        <img class="gallery-element-img ninth-gallery-element-img"src="assets/lady-with-an-ermine/thumbnail.jpg" alt="Lady with an Ermin - Leonardo da Vinci">
+        <div class="gallery-element-text-wrapper">
+          <p class="gallery-element-title">Lady with an Ermine</p>
+          <p class="gallery-element-subtitle">Leonardo da Vinci</p>
+        </div>
+      </div>
 
-  The Boy in the Red Vest
-  Paul Cézanne
+      <div class="gallery-element tenth-gallery-element">
+        <img class="gallery-element-img tenth-gallery-element-img"src="assets/the-night-cafe/thumbnail.jpg" alt="The Night Café - Vincent Van Gogh">
+        <div class="gallery-element-text-wrapper">
+          <p class="gallery-element-title">The Night Café</p>
+          <p class="gallery-element-subtitle">Vincent Van Gogh</p>
+        </div>
+      </div>
 
-  Arnolfini Portrait
-  Jan van Eyck
+      <div class="gallery-element eleventh-gallery-element">
+        <img class="gallery-element-img eleventh-gallery-element-img"src="assets/the-basket-of-apples/thumbnail.jpg" alt="The Basket of Apples - Paul Cézanne">
+        <div class="gallery-element-text-wrapper">
+          <p class="gallery-element-title">The Basket of Apples</p>
+          <p class="gallery-element-subtitle">Paul Cézanne</p>
+        </div>
+      </div>
 
-  Mona Lisa
-  Leonardo da Vinci
+      <div class="gallery-element twelfth-gallery-element">
+        <img class="gallery-element-img twelfth-gallery-element-img"src="assets/the-boy-in-the-red-vest/thumbnail.jpg" alt="The Boy in the Red Vest - Edward Hopper">
+        <div class="gallery-element-text-wrapper">
+          <p class="gallery-element-title">The Boy in the Red Vest</p>
+          <p class="gallery-element-subtitle">Paul Cézanne</p>
+        </div>
+      </div>
 
-  The Swing
-  Jean-Honoré Fragonard
+      <div class="gallery-element thirteenth-gallery-element">
+        <img class="gallery-element-img thirteenth-gallery-element-img"src="assets/arnolfini-portrait/thumbnail.jpg" alt="Arnolfini Portrait - Jan van Eyck">
+        <div class="gallery-element-text-wrapper">
+          <p class="gallery-element-title">Arnolfini Portrait</p>
+          <p class="gallery-element-subtitle">Jan van Eyck</p>
+        </div>
+      </div>
+
+      <div class="gallery-element fourteenth-gallery-element">
+        <img class="gallery-element-img fourteenth-gallery-element-img"src="assets/mona-lisa/thumbnail.jpg" alt="Mona Lisa - Leonardo da Vinci">
+        <div class="gallery-element-text-wrapper">
+          <p class="gallery-element-title">Mona Lisa</p>
+          <p class="gallery-element-subtitle">Leonardo da Vinci</p>
+        </div>
+      </div>
+
+      <div class="gallery-element fifthteenth-gallery-element">
+        <img class="gallery-element-img fifthteenth-gallery-element-img"src="assets/the-swing/thumbnail.jpg" alt="The Swing - Jean-Honoré Fragonard">
+        <div class="gallery-element-text-wrapper">
+          <p class="gallery-element-title">The Swing</p>
+          <p class="gallery-element-subtitle">Jean-Honoré Fragonard</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
